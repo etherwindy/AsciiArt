@@ -1,5 +1,4 @@
 #include <iostream>
-#include <windows.h>
 #include <fstream>
 #include <memory>
 
@@ -10,7 +9,7 @@
 #define STB_IMAGE_RESIZE_STATIC
 #include "stb_image_resize2.h"
 
-namespace read
+namespace img_utils
 {
     // 读取jpg图片转为RGB数组
     void read_img(const char *filename, unsigned char *&data, int &width, int &height, int &channels)

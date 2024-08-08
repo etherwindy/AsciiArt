@@ -2,7 +2,7 @@
 #include <getopt.h>
 
 #include "ascii.hpp"
-#include "read_img.hpp"
+#include "img_utils.hpp"
 #include "terminal_utils.hpp"
 
 const char *help_str = 
@@ -64,7 +64,7 @@ int main(int argc, char *argv[])
     // 读取jpg图片转为RGB数组
     unsigned char *data;
     int width, height, channels;
-    read::read_img(filename, data, width, height, channels);
+    img_utils::read_img(filename, data, width, height, channels);
     std::cout << "width: " << width << std::endl;
     std::cout << "height: " << height << std::endl;
     std::cout << "channels: " << channels << std::endl;
@@ -78,7 +78,7 @@ int main(int argc, char *argv[])
     // RGB数组等比例压缩
     unsigned char *compressed_data;
     int compressed_width, compressed_height;
-    read::compress(data, width, height, compressed_data, terminal_width, terminal_height,
+    img_utils::compress(data, width, height, compressed_data, terminal_width, terminal_height,
                     channels, compressed_width, compressed_height);
 
     // 输出 ASCII 图片
