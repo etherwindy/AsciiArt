@@ -7,6 +7,9 @@ project(asciiArt VERSION 1.0)
 # 设置 C++ 标准
 set(CMAKE_CXX_STANDARD 17)
 
+# 支持 unicode
+add_definitions(-DUNICODE -D_UNICODE)
+
 # 设置不同系统下的编译选项
 if(WIN32)
     message(STATUS "Now is windows")

@@ -1,4 +1,4 @@
-#include <iostream>
+#pragma once
 #ifdef _WIN32
 #include <windows.h>
 #elif __linux__
@@ -7,11 +7,9 @@
 #endif
 
 
-namespace terminal_utils
-{
+namespace terminal_utils {
     // 读取终端模拟器的长宽
-    void get_size(int &width, int &height)
-    {
+    void get_size(int &width, int &height) {
         #ifdef _WIN32
             CONSOLE_SCREEN_BUFFER_INFO csbi;
             GetConsoleScreenBufferInfo(GetStdHandle(STD_OUTPUT_HANDLE), &csbi);
@@ -26,8 +24,5 @@ namespace terminal_utils
     }
 
     // 清空终端
-    void clear()
-    {
-        system("cls");
-    }
+    void clear() { system("cls"); }
 }
