@@ -21,5 +21,8 @@ endif()
 # 指定构建类型，如果不指定，默认的构建类型是 Release
 set(CMAKE_BUILD_TYPE Debug)
 
+# 添加头文件搜索路径
+set(SRC_PATH ${PROJECT_SOURCE_DIR}/src)
+
 # 添加可执行文件
-add_executable(asciiArt main.cpp)
+add_executable(asciiArt ${SRC_PATH}/main.cpp)
