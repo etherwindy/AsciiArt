@@ -4,6 +4,7 @@
 
 #include "ascii.hpp"
 #include "unicode_braille.hpp"
+#include "unicode_block.hpp"
 #include "img_utils.hpp"
 #include "terminal_utils.hpp"
 
@@ -13,13 +14,13 @@ const char *help_str =
     " -F: jpg, png or jfif filename.\n"
     " -W: max width, default is terminal width.\n"
     " -H: max height, default is terminal height.\n"
-    " -S: style, ascii or braille, default is ascii.\n"
+    " -S: style, 'ascii', 'braille' or 'block', default is 'ascii'.\n"
     " -N: number of grayscale bits, default is 4, max is 4 (ascii style only).\n"
-    " -T: threshold value, default is 128 (braille style only).\n"
+    " -T: threshold value, default is 128 (braille and block style only).\n"
     " -G: gamma value, default is 1.0.\n"
     " -c: enable color.\n"
     " -a: enable alpha.\n"
-    " -r: enable gray reverse (color disabled only).\n";
+    " -r: enable gray reverse.\n";
 
 int main(int argc, char *argv[]) {
     // 解析命令行参数
@@ -98,6 +99,18 @@ int main(int argc, char *argv[]) {
         // 输出 Unicode 盲文图片
         unicode_braille::enable_unicode_braille();
         unicode_braille_generator.print_unicode_braille(compressed_data, compressed_width, compressed_height, channels);
+
+    } else if (strcmp(style, "block") == 0) {
+        // 创建 Unicode 方块图片生成对象
+        unicode_block::UnicodeBlockGenerator unicode_block_generator(threshold, gamma, color, alpha, gray_reverse);
+
+        // RGB数组等比例压缩
+        img_utils::compress(data, width, height, compressed_data, max_width * 2, max_height * 2,
+                            channels, compressed_width, compressed_height, true);
+
+        // 输出 Unicode 方块图片
+        unicode_block::enable_unicode_block();
+        unicode_block_generator.print_unicode_block(compressed_data, compressed_width, compressed_height, channels);
 
     } else {
         std::cerr << "Invalid style." << std::endl;

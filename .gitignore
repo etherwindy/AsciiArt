@@ -1,5 +1,6 @@
 # CMake generated files
 build/
+cmake-build-debug/
 
 # Compile output
 *.o
@@ -69,6 +70,7 @@ build/
 *.opensdf
 *.opendb
 .ipch/
+.idea/
 
 # images
 *.png

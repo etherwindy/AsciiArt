@@ -48,22 +48,39 @@ void disable_unicode_braille() {
 
 // Unicode 盲文字符集
 const std::wstring unicode_braille = L""
-    L"⠀⠁⠂⠃⠄⠅⠆⠇⠈⠉⠊⠋⠌⠍⠎⠏"
-    L"⠐⠑⠒⠓⠔⠕⠖⠗⠘⠙⠚⠛⠜⠝⠞⠟"
-    L"⠠⠡⠢⠣⠤⠥⠦⠧⠨⠩⠪⠫⠬⠭⠮⠯"
-    L"⠰⠱⠲⠳⠴⠵⠶⠷⠸⠹⠺⠻⠼⠽⠾⠿"
-    L"⡀⡁⡂⡃⡄⡅⡆⡇⡈⡉⡊⡋⡌⡍⡎⡏"
-    L"⡐⡑⡒⡓⡔⡕⡖⡗⡘⡙⡚⡛⡜⡝⡞⡟"
-    L"⡠⡡⡢⡣⡤⡥⡦⡧⡨⡩⡪⡫⡬⡭⡮⡯"
-    L"⡰⡱⡲⡳⡴⡵⡶⡷⡸⡹⡺⡻⡼⡽⡾⡿"
-    L"⢀⢁⢂⢃⢄⢅⢆⢇⢈⢉⢊⢋⢌⢍⢎⢏"
-    L"⢐⢑⢒⢓⢔⢕⢖⢗⢘⢙⢚⢛⢜⢝⢞⢟"
-    L"⢠⢡⢢⢣⢤⢥⢦⢧⢨⢩⢪⢫⢬⢭⢮⢯"
-    L"⢰⢱⢲⢳⢴⢵⢶⢷⢸⢹⢺⢻⢼⢽⢾⢿"
-    L"⣀⣁⣂⣃⣄⣅⣆⣇⣈⣉⣊⣋⣌⣍⣎⣏"
-    L"⣐⣑⣒⣓⣔⣕⣖⣗⣘⣙⣚⣛⣜⣝⣞⣟"
-    L"⣠⣡⣢⣣⣤⣥⣦⣧⣨⣩⣪⣫⣬⣭⣮⣯"
-    L"⣰⣱⣲⣳⣴⣵⣶⣷⣸⣹⣺⣻⣼⣽⣾⣿";
+    // L"⠀⠁⠂⠃⠄⠅⠆⠇⠈⠉⠊⠋⠌⠍⠎⠏"
+    // L"⠐⠑⠒⠓⠔⠕⠖⠗⠘⠙⠚⠛⠜⠝⠞⠟"
+    // L"⠠⠡⠢⠣⠤⠥⠦⠧⠨⠩⠪⠫⠬⠭⠮⠯"
+    // L"⠰⠱⠲⠳⠴⠵⠶⠷⠸⠹⠺⠻⠼⠽⠾⠿"
+    // L"⡀⡁⡂⡃⡄⡅⡆⡇⡈⡉⡊⡋⡌⡍⡎⡏"
+    // L"⡐⡑⡒⡓⡔⡕⡖⡗⡘⡙⡚⡛⡜⡝⡞⡟"
+    // L"⡠⡡⡢⡣⡤⡥⡦⡧⡨⡩⡪⡫⡬⡭⡮⡯"
+    // L"⡰⡱⡲⡳⡴⡵⡶⡷⡸⡹⡺⡻⡼⡽⡾⡿"
+    // L"⢀⢁⢂⢃⢄⢅⢆⢇⢈⢉⢊⢋⢌⢍⢎⢏"
+    // L"⢐⢑⢒⢓⢔⢕⢖⢗⢘⢙⢚⢛⢜⢝⢞⢟"
+    // L"⢠⢡⢢⢣⢤⢥⢦⢧⢨⢩⢪⢫⢬⢭⢮⢯"
+    // L"⢰⢱⢲⢳⢴⢵⢶⢷⢸⢹⢺⢻⢼⢽⢾⢿"
+    // L"⣀⣁⣂⣃⣄⣅⣆⣇⣈⣉⣊⣋⣌⣍⣎⣏"
+    // L"⣐⣑⣒⣓⣔⣕⣖⣗⣘⣙⣚⣛⣜⣝⣞⣟"
+    // L"⣠⣡⣢⣣⣤⣥⣦⣧⣨⣩⣪⣫⣬⣭⣮⣯"
+    // L"⣰⣱⣲⣳⣴⣵⣶⣷⣸⣹⣺⣻⣼⣽⣾⣿";
+    L"⠀⠁⠂⠃⠄⠅⠆⠇⡀⡁⡂⡃⡄⡅⡆⡇"
+    L"⠈⠉⠊⠋⠌⠍⠎⠏⡈⡉⡊⡋⡌⡍⡎⡏"
+    L"⠐⠑⠒⠓⠔⠕⠖⠗⡐⡑⡒⡓⡔⡕⡖⡗"
+    L"⠘⠙⠚⠛⠜⠝⠞⠟⡘⡙⡚⡛⡜⡝⡞⡟"
+    L"⠠⠡⠢⠣⠤⠥⠦⠧⡠⡡⡢⡣⡤⡥⡦⡧"
+    L"⠨⠩⠪⠫⠬⠭⠮⠯⡨⡩⡪⡫⡬⡭⡮⡯"
+    L"⠰⠱⠲⠳⠴⠵⠶⠷⡰⡱⡲⡳⡴⡵⡶⡷"
+    L"⠸⠹⠺⠻⠼⠽⠾⠿⡸⡹⡺⡻⡼⡽⡾⡿"
+    L"⢀⢁⢂⢃⢄⢅⢆⢇⣀⣁⣂⣃⣄⣅⣆⣇"
+    L"⢈⢉⢊⢋⢌⢍⢎⢏⣈⣉⣊⣋⣌⣍⣎⣏"
+    L"⢐⢑⢒⢓⢔⢕⢖⢗⣐⣑⣒⣓⣔⣕⣖⣗"
+    L"⢘⢙⢚⢛⢜⢝⢞⢟⣘⣙⣚⣛⣜⣝⣞⣟"
+    L"⢠⢡⢢⢣⢤⢥⢦⢧⣠⣡⣢⣣⣤⣥⣦⣧"
+    L"⢨⢩⢪⢫⢬⢭⢮⢯⣨⣩⣪⣫⣬⣭⣮⣯"
+    L"⢰⢱⢲⢳⢴⢵⢶⢷⣰⣱⣲⣳⣴⣵⣶⣷"
+    L"⢸⢹⢺⢻⢼⢽⢾⢿⣸⣹⣺⣻⣼⣽⣾⣿";
+    
 
 wchar_t get_braille_char(const int &index) { return unicode_braille[index]; }
 
@@ -99,16 +116,7 @@ private:
                                 const int &i, const int &j) {
         int braille_code = 0;
         for (int k = 1; k >= 0; k--) {
-            int index = (i * 4 + 3) * width + j * 2 + k;
-            int r = data[index * channels + 0];
-            int g = data[index * channels + 1];
-            int b = data[index * channels + 2];
-            int a = (channels > 3) ? data[index * channels + 3] : 0xff;
-            int gray = enable_alpha ? a : (r + g + b) / 3;
-            braille_code = (braille_code << 1) | (gray > threshold);
-        }
-        for (int k = 1; k >= 0; k--) {
-            for (int l = 2; l >= 0; l--) {
+            for (int l = 3; l >= 0; l--) {
                 int index = (i * 4 + l) * width + j * 2 + k;
                 int r = data[index * channels + 0];
                 int g = data[index * channels + 1];
@@ -126,12 +134,6 @@ private:
     inline int get_braille_code_from_gray(const unsigned char *data, const int &width, const int &height, const int &channels,
                                 const int &i, const int &j) {
         int braille_code = 0;
-        for (int k = 1; k >= 0; k--) {
-            int index = (i * 4 + 3) * width + j * 2 + k;
-            int a = (channels > 3) ? data[index * channels + 3] : 0xff;
-            int gray = enable_alpha ? a : data[index * channels + 0];
-            braille_code = (braille_code << 1) | (gray > threshold);
-        }
         for (int k = 1; k >= 0; k--) {
             for (int l = 2; l >= 0; l--) {
                 int index = (i * 4 + l) * width + j * 2 + k;
@@ -187,7 +189,7 @@ private:
 
         std::wstring_convert<std::codecvt_utf8<wchar_t>> converter;
         // 同时保存到txt文件，保存时带ansi编码，可以用记事本打开
-        std::ofstream out("output.txt");
+        // std::ofstream out("output.txt");
 
         for (int i = 0; i < braille_height; i++) {
             for (int j = 0; j < braille_width; j++) {
@@ -201,7 +203,7 @@ private:
                 wchar_t braille_char = get_braille_char(braille_code);
                 std::cout << "\e[38;2;" << r << ";" << g << ";" << b << "m" << converter.to_bytes(braille_char);
                 // 同时保存到txt文件，保存时带ansi编码，可以用记事本打开
-                out << converter.to_bytes(braille_char);
+                // out << converter.to_bytes(braille_char);
                 
             }
             std::cout << "\e[0m" << std::endl;

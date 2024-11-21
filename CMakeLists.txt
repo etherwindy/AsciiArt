@@ -25,4 +25,4 @@ set(CMAKE_BUILD_TYPE Debug)
 set(SRC_PATH ${PROJECT_SOURCE_DIR}/src)
 
 # 添加可执行文件
-add_executable(asciiArt ${SRC_PATH}/main.cpp)
+add_executable(asciiart ${SRC_PATH}/main.cpp)
