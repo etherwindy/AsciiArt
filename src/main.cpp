@@ -101,15 +101,10 @@ int main(int argc, char *argv[]) {
     unsigned char *data;
     int width, height, channels;
     img_utils::read_img(filename, data, width, height, channels);
-    std::cout << "width: " << width << std::endl;
-    std::cout << "height: " << height << std::endl;
-    std::cout << "channels: " << channels << std::endl;
 
     // 读取终端模拟器的长宽
     if (!set_size)
         terminal_utils::get_size(max_width, max_height);
-    std::cout << "max_width: " << max_width << std::endl;
-    std::cout << "max_height: " << max_height << std::endl;
 
     unsigned char *compressed_data;
     int compressed_width, compressed_height;
@@ -162,9 +157,6 @@ int main(int argc, char *argv[]) {
         std::cerr << "Invalid style." << std::endl;
         return 1;
     }
-
-    // 等待用户输入
-    std::cin.get();
 
     // 释放内存
     delete[] compressed_data;

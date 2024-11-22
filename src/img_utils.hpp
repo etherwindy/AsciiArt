@@ -45,9 +45,6 @@ void compress(const unsigned char *data, int width, int height,
         compressed_height = height * scale;
     }
 
-    std::cout << "compressed_width: " << compressed_width << std::endl;
-    std::cout << "compressed_height: " << compressed_height << std::endl;
-
     // 申请压缩后的RGB数组内存
     compressed_data =
         new unsigned char[compressed_width * compressed_height * channels];
