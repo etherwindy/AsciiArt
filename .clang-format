@@ -1,0 +1,21 @@
+Language: Cpp
+
+BasedOnStyle: LLVM
+
+IndentWidth: 4
+
+TabWidth: 4
+
+AccessModifierOffset: -4
+
+AlignAfterOpenBracket: Align
+
+AlignConsecutiveAssignments: true
+
+AlignConsecutiveDeclarations: false
+
+AlignOperands: true
+
+AlignTrailingComments: true
+
+AllowAllParametersOfDeclarationOnNextLine: false
