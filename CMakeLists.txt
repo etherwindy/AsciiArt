@@ -1,8 +1,8 @@
 # 设置 CMake 最低版本要求
-cmake_minimum_required(VERSION 3.10)
+cmake_minimum_required(VERSION 3.30)
 
 # 设置项目名称和版本
-project(asciiArt VERSION 1.0)
+project(AsciiArt VERSION 1.0)
 
 # 设置 C++ 标准
 set(CMAKE_CXX_STANDARD 17)
@@ -10,13 +10,9 @@ set(CMAKE_CXX_STANDARD 17)
 # 支持 unicode
 add_definitions(-DUNICODE -D_UNICODE)
 
-# 设置不同系统下的编译选项
-if(WIN32)
-    message(STATUS "Now is windows")
-    set(CMAKE_GENERATOR "MinGW Makefiles")
-elseif(LINUX)
-    message(STATUS "Now is Linux")
-endif()
+# 指定优化级别
+set(CMAKE_CXX_FLAGS_RELEASE "-O3")
+set(CMAKE_CXX_FLAGS_DEBUG "-g -O0")
 
 # 指定构建类型，如果不指定，默认的构建类型是 Release
 set(CMAKE_BUILD_TYPE Debug)

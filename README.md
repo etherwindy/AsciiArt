@@ -8,6 +8,10 @@
 - [AsciiArt -- An ASCII Art Generator](#asciiart----an-ascii-art-generator)
   - [Table of Contents](#table-of-contents)
   - [Features](#features)
+  - [Examples](#examples)
+    - [block](#block)
+    - [braille](#braille)
+    - [block](#block-1)
   - [Build Instructions](#build-instructions)
     - [Windows](#windows)
     - [Linux](#linux)
@@ -17,22 +21,54 @@
 
 ## Features
 
-- Convert images to ASCII art or Braille representation.
+- Convert images to ASCII or unicode representation.
 - Adjustable width and height for output.
 - Support for color and alpha blending.
 - Customizable grayscale and threshold settings.
+
+## Examples
+
+### block
+
+Original Image:
+
+![laoba](figures/laoba.png)
+
+Output:
+
+![laoba_acsii](figures/laoba_ascii.png)
+
+### braille
+
+Original Image:
+
+![furiren](figures/furiren.png)
+
+Output:
+
+![furiren_braille](figures/furiren_braille.png)
+
+### block
+
+Original Image:
+
+![btr](figures/btr.png)
+
+Output:
+
+![btr_block](figures/btr_block.png)
 
 ## Build Instructions
 
 ### Windows
 
-To build the project on Windows, follow these steps:
+To build the project on Windows, taking MinGW as an example, follow these steps:
 
 ```sh
 mkdir build
 cd .\build\
-cmake ..
-mingw32-make.exe
+cmake -G "MinGW Makefiles"..
+cmake --build .
 ```
 
 ### Linux
@@ -43,7 +79,7 @@ To build the project on Linux, use the following commands:
 mkdir build
 cd ./build
 cmake ..
-make
+cmake --build .
 ```
 
 ## Usage
