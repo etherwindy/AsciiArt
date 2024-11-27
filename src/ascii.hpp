@@ -2,11 +2,12 @@
 #include <cmath>
 #include <cstring>
 #include <iostream>
+#include <string>
 
 namespace ascii {
 // 按字符密度给 ASCII 字符排序
-const char *ascii_chars[5] = {"@", " @", " :#@", " :=xnHN@",
-                              " .:;!?vxnhVUHNW@"};
+inline std::string ascii_chars[6] = {"@", " @", " :#@", " :=xnHN@",
+                                     " .:;!?vxnhVUHNW@"};
 
 class AsciiGenerator {
 private:

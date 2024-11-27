@@ -17,9 +17,14 @@ const char *help_str =
     " -S: style, 'ascii', 'braille' or 'block', default is 'ascii'.\n"
     " -N: number of grayscale bits, default is 4, max is 4 (ascii style "
     "only).\n"
-    " -C: threshold value of gray level, default is 128 (braille and block "
+    " -I: ascii icons, default is \"@\", \" @\", \" :#@\", \" :=xnHN@\", \" "
+    ".:;!?vxnhVUHNW@\" for different grayscale bits. The number of icons "
+    "shorld equals to 2^N.\n"
+    " -C: threshold value of gray level, default is "
+    "128 (braille and block "
     "style only).\n"
-    " -A: threshold value of alpha, default is 128 (braille and block style "
+    " -A: threshold value of alpha, default is 128 "
+    "(braille and block style "
     "only).\n"
     " -G: gamma value, default is 1.0.\n"
     " -c: enable color.\n"
@@ -43,7 +48,7 @@ int main(int argc, char *argv[]) {
     int max_width = 0xfff, max_height = 0xfff;
 
     int opt;
-    const char *optstring = "hF:W:H:S:N:C:A:G:caer";
+    const char *optstring = "hF:W:H:S:N:I:C:A:G:caer";
     while ((opt = getopt(argc, argv, optstring)) != -1) {
         switch (opt) {
         case 'h':
@@ -70,6 +75,15 @@ int main(int argc, char *argv[]) {
                 return 1;
             }
             break;
+        case 'I': {
+            auto icons = std::string(optarg);
+            if (icons.size() != pow(2, grayscale)) {
+                std::cerr << "Invalid number of icons." << std::endl;
+                return 1;
+            }
+            ascii::ascii_chars[grayscale] = icons;
+            break;
+        }
         case 'C':
             threshold_gray = atoi(optarg);
             break;
