@@ -9,9 +9,9 @@
   - [Table of Contents](#table-of-contents)
   - [Features](#features)
   - [Examples](#examples)
-    - [block](#block)
+    - [ascii](#ascii)
     - [braille](#braille)
-    - [block](#block-1)
+    - [block](#block)
   - [Build Instructions](#build-instructions)
     - [Windows](#windows)
     - [Linux](#linux)
@@ -28,35 +28,47 @@
 
 ## Examples
 
-### block
+### ascii
 
 Original Image:
 
-![laoba](figures/laoba.png)
+<div align="center">
+<img src="figures/laoba.png" width="480">
+</div>
 
 Output:
 
-![laoba_acsii](figures/laoba_ascii.png)
+<div align="center">
+<img src="figures/laoba_ascii.png" width="480">
+</div>
 
 ### braille
 
 Original Image:
 
-![furiren](figures/furiren.png)
+<div align="center">
+<img src="figures/furiren.png" width="480">
+</div>
 
 Output:
 
-![furiren_braille](figures/furiren_braille.png)
+<div align="center">
+<img src="figures/furiren_braille.png" width="480">
+</div>
 
 ### block
 
 Original Image:
 
-![btr](figures/btr.png)
+<div align="center">
+<img src="figures/btr.png" width="480">
+</div>
 
 Output:
 
-![btr_block](figures/btr_block.png)
+<div align="center">
+<img src="figures/btr_block.png" width="480">
+</div>
 
 ## Build Instructions
 

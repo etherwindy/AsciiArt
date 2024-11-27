@@ -71,10 +71,3 @@ cmake-build-debug/
 *.opendb
 .ipch/
 .idea/
-
-# images
-*.png
-*.jpg
-*.jpeg
-*.gif
-*.jfif
