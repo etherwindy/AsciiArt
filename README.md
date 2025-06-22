@@ -83,9 +83,9 @@ cmake -G "MinGW Makefiles"..
 cmake --build .
 ```
 
-### Linux
+### Linux & MacOS
 
-To build the project on Linux, use the following commands:
+To build the project on Linux or MacOS, use the following commands:
 
 ```sh
 mkdir build
@@ -119,7 +119,7 @@ asciiart.exe -F filename [option]
 | `-H`   | Max height (default is terminal height). |
 | `-S`   | Output style: `ascii`, `braille` or 'block' (default is `ascii`). |
 | `-N`   | Number of grayscale bits (default is 4, max is 4 for ASCII style only). |
-| `-I`   | Ascii icons, default is `@`, ` @`, ` :#@`, ` :=xnHN@`, ` .:;!?vxnhVUHNW@` for different grayscale bits. The number of icons shorld equals to $2^N$.|
+| `-I`   | Ascii icons, default is `@`, `@`, `:#@`, `:=xnHN@`, `.:;!?vxnhVUHNW@` for different grayscale bits. The number of icons shorld equals to $2^N$.|
 | `-C`   | Color threshold value (default is 128 for Braille and Block style only). |
 | `-A`   | Alpha threshold value (default is 128 for Braille and Block style only). |
 | `-G`   | Gamma value (default is 1.0). |

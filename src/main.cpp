@@ -9,7 +9,7 @@
 #include "unicode_braille.hpp"
 
 const char *help_str =
-    "Usage: asciiArt -F filename [options]\n"
+    "Usage: asciiart -F filename [options]\n"
     "Options:\n"
     " -F: jpg, png or jfif filename.\n"
     " -W: max width, default is terminal width.\n"

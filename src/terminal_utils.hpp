@@ -1,7 +1,7 @@
 #pragma once
 #ifdef _WIN32
 #include <windows.h>
-#elif __linux__
+#elif (__linux__) || (__APPLE__)
 #include <sys/ioctl.h>
 #include <unistd.h>
 #endif
@@ -15,7 +15,7 @@ void get_size(int &width, int &height) {
     GetConsoleScreenBufferInfo(GetStdHandle(STD_OUTPUT_HANDLE), &csbi);
     width  = csbi.srWindow.Right - csbi.srWindow.Left + 1;
     height = csbi.srWindow.Bottom - csbi.srWindow.Top + 1;
-#elif __linux__
+#elif (__linux__) || (__APPLE__)
     struct winsize size;
     ioctl(STDIN_FILENO, TIOCGWINSZ, &size);
     width  = size.ws_col;
@@ -27,7 +27,7 @@ void get_size(int &width, int &height) {
 void clear() {
 #ifdef _WIN32
     system("cls");
-#elif __linux__
+#elif (__linux__) || (__APPLE__)
     system("clear");
 #endif
 }
