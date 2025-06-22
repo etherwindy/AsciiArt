@@ -46,7 +46,7 @@ void disable_unicode_block() {
     unicode_block_status.unicode_block_enabled = false;
 }
 
-// Unicode 盲文字符集
+// Unicode 方块字符集
 const std::wstring unicode_block = L""
                                    L"⠀▘▖▌"
                                    L"▝▀▞▛"
